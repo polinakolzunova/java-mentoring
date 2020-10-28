@@ -3,7 +3,7 @@ import java.util.regex.*;
 public class RomanDigit{
 
     public static boolean isRoman(String str){
-        return Pattern.compile("(?i)^[VIXLCMD]+$").matcher(str).matches();
+        return Pattern.compile("^[VIXLCMD]+$").matcher(str).matches();
     }
 
     public static int convertToDecimal(String str) {
@@ -69,13 +69,13 @@ public class RomanDigit{
 
     private static int value(char r) {
         switch(r) {
-            case 'I': case 'i': return 1;
-            case 'V': case 'v': return 5;
-            case 'X': case 'x': return 10;
-            case 'L': case 'l': return 50;
-            case 'C': case 'c': return 100;
-            case 'D': case 'd': return 500;
-            case 'M': case 'm': return 1000;
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
             default: return -1;
         }
     }

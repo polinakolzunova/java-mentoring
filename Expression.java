@@ -19,7 +19,7 @@ public class Expression {
     }
 
     private void disassemble(String str) throws Exception {
-        Matcher match = Pattern.compile("^(\\w+)\\s*(\\*|-|\\+|\\/)\\s*(\\w+)$").matcher(str);
+        Matcher match = Pattern.compile("^([VIXLCMD\\d]+)\\s+(\\*|-|\\+|\\/)\\s+([VIXLCMD\\d]+)$").matcher(str);
 
         if (match.find()) {
 
